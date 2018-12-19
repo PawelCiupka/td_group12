@@ -77,6 +77,14 @@
   font-size: 2rem;
 }
 
+.text a {
+  color: #fff;
+}
+
+.text a:hover {
+  color: #fff;
+}
+
 .third {
   height: auto;
 
@@ -97,12 +105,43 @@
 .fourth {  
   min-height: 80vh;
 
-  background-color: #8e7a52;
+  background-color: #fcda97;
   padding: 3rem 0 1.5rem 0;
 }
 
 .textBreak{
-  padding: 2rem 0 0 0;
+  padding: 2rem 0 0 0;  
+}
+
+.fifth {
+  background-color: #977c47;
+  padding: 3rem 0 1.5rem 0;
+}
+
+footer {
+  height: auto;
+
+  background-color: #6d6b67;
+  padding: 1rem 0 1.1rem 0 !important;
+  
+}
+
+.footerText {
+  font-size: 1rem;
+}
+
+.footerText ul {
+  margin: 0 0 0 1rem;
+  list-style: none;
+}
+
+.footerText a {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.footerText a:hover {
+  color: #fff;
 }
 
 @media (max-width: 768px) { 

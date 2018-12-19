@@ -5,8 +5,6 @@ import photo1 from './images/5.png';
 import photo2 from './images/4.png';
 import photo3 from './images/6.png';
 
-import gamePath from './game/TD_GROUP12.zip';
-
 
 class App extends Component {
   constructor(props) {
@@ -106,7 +104,7 @@ class App extends Component {
           </div>
 
             <p className="text">
-              1. Pobierz naszą grę  <a href="/images/myw3schoolsimage.jpg" download>TUTAJ</a>.
+              1. Pobierz naszą grę <a href="https://ufile.io/srxgi" target="_blank">TUTAJ</a>.
             </p>
             <p className="text">
               2. Rozpakuj archiwum na swoim komputerze.
@@ -120,7 +118,37 @@ class App extends Component {
           
         </div>
 
+        <footer className="row">
 
+          <div className="col-sm-1"></div>
+          <div className="col-sm-10">
+            <p className="footerText">            
+              Gra została stworzona na zajęciach "Podstawy gier komputerowych" na Politechnice Łódzkiej przez zespół 12.              
+            </p>
+            <p className="footerText">
+              <strong>Członkowie:</strong>
+              <ul>
+                <li>Dawid Gierowski</li>
+                <li>Marcin Kwapisz</li>
+                <li>Mateusz Kubicki</li>
+                <li>Bartłomiej Ciesielski</li>
+                <li>Paweł Ciupka</li>
+                <li>Damian Salata</li>
+                <li>Michał Chmielewski</li>
+              </ul>
+            </p>
+            <p className="textBreak"></p>
+            <p className="footerText">
+            Zapraszamy na naszego GitHuba! :) <br></br>
+              <a href="https://github.com/CinU331/TD_Grupa12"><i class="fab fa-github"></i> TD_Grupa12
+</a>
+            </p>
+
+          </div>
+          <div className="col-sm-1"></div>
+
+
+        </footer>
       </div>
   
       
