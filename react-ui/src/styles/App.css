@@ -1,0 +1,65 @@
+.App {
+  min-height: 100vh;
+  max-width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+
+.row {
+  width: 100%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  
+}
+
+.first {
+  height: 100vh;
+
+  background: url('../images/3.png') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+}
+
+.first .general {
+  height: 30%;
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+.gameTitle {
+  width: 100%;
+  text-align: center;
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+.gameTitle h1 {  
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.second {
+  height: 60vh;
+  background: #fabf49;
+}
+
+.sectionTitle {
+  width: 100%;
+  text-align: center;
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+.sectionTitle h2 {  
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+
+@media (min-width: 768px) { 
+  .App {
+		font-size: 1vh !important;
+  }
+ }
