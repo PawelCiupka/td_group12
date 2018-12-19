@@ -5,6 +5,8 @@ import photo1 from './images/5.png';
 import photo2 from './images/4.png';
 import photo3 from './images/6.png';
 
+import gamePath from './game/TD_GROUP12.zip';
+
 
 class App extends Component {
   constructor(props) {
@@ -72,9 +74,52 @@ class App extends Component {
 
         </div>
 
-        <div className="row fourth">        
+        <div className="row fourth">   
+
+          <div className="col-sm-1"></div>
+
+          <div className="col-sm-10">
+
+            <p className="text">
+              Masywne siły wrogów. Dlaczego i skąd przybywają? Tego nie wie nikt, a wizje proroków są zamglone. Ktokolwiek inny coś wie..? Przybywają. Królestwo prawie upada. Życie i jego cele nie mają żadnej wartości dla tych istot. Pola gniją. Lasy płoną. Lud cierpi. Dewastacja ma miejsce tu i teraz. Królestwo ma jedynie jedną możliwą opcję: bronić się, bronić i bronić. Jesteś gotów?
+            </p>
+
+            <p className="textBreak"></p>
+
+            <p className="text">
+            {this.state.gameTitle} to gra w stylu niestandardowego Tower Defence połączonego z elementami gry RPG, która rzuca wyzwanie weteranom tego gatunku. Uważaj, gdyż na swojej drodzę napotkasz całe hordy szkieletów, nieumarłych, bestii i wiele innych kreatur. Rozmieszczaj szybkostrzelnych łuczników! Pokonuj wrogów magicznymi laserami! Rozstaw obszarowe armatki! {this.state.gameTitle} oferuje różnorodność i wyzwania. Przezwyciężaj niestworzone dziwactwa ze strategią i siłą własnych mięśni! Pomóż bezbronnym mieszkańcom i nie pozwól by potwory splądrowały spichlerz. 
+            </p>
+            
+          </div>
+          <div className="col-sm-1"></div>
           
         </div>
+
+        <div className="row fifth">   
+
+          <div className="col-sm-2"></div>
+
+          <div className="col-sm-8">
+
+          <div className="row sectionTitle">
+            <h3>Chcesz spróbować swoich sił i zmierzyć się z wrogami Królestwa? Przenieś się do fantastycznego świata {this.state.gameTitle}!</h3>
+          </div>
+
+            <p className="text">
+              1. Pobierz naszą grę  <a href="/images/myw3schoolsimage.jpg" download>TUTAJ</a>.
+            </p>
+            <p className="text">
+              2. Rozpakuj archiwum na swoim komputerze.
+            </p>
+            <p className="text">
+              3. Uruchom grę wybierając plik z rozszerzeniem .exe.
+            </p>
+
+          </div>
+          <div className="col-sm-2"></div>
+          
+        </div>
+
 
       </div>
   

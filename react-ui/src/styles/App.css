@@ -54,12 +54,21 @@
 
 .sectionTitle {
   width: 100%;
-  text-align: center;
   margin: 1.5rem 0 1.5rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sectionTitle h2 {  
-  font-size: 4rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.sectionTitle h3 {
+  text-align: center;
+  font-size: 2.8rem;
   font-weight: 700;
 }
 
@@ -69,7 +78,7 @@
 }
 
 .third {
-  height: 70vh;
+  height: auto;
 
   background-color: #8e7a52;
 }
@@ -83,6 +92,17 @@
   height: 100%;
 
   background-color:rgba(0, 0, 0, 1);
+}
+
+.fourth {  
+  min-height: 80vh;
+
+  background-color: #8e7a52;
+  padding: 3rem 0 1.5rem 0;
+}
+
+.textBreak{
+  padding: 2rem 0 0 0;
 }
 
 @media (max-width: 768px) { 
