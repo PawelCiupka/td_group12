@@ -149,11 +149,23 @@ footer {
     font-size: 3rem;
   }
 
+  .sectionTitle h3 {  
+    font-size: 2rem;
+  }
+
   .text {
     font-size: 1.2rem;
   }
 
   .third {
     height: auto;
+  }
+
+  .footerText {
+    font-size: 0.8rem;
+  }
+
+  .footerText a {
+    font-size: 1.5rem;
   }
 }
