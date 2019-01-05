@@ -1,5 +1,5 @@
 # "td_group12" game website
-This website is use to present game project which I create with mu collegues on University.
+This website is use to present game project which I create with my collegues on University.
 
 ## Table of contents
 * [Technologies](#technologies)
@@ -21,4 +21,4 @@ Just click the link: [https://tdgroup12.herokuapp.com/](https://tdgroup12.heroku
 Project is:  _in progress_.
 
 ## Contact
-Created by [@PawelCiupka](http://pawel-ciupka.pl/pages/contact.html) - feel free to contact me!
+Website created only by [@PawelCiupka](http://pawel-ciupka.pl/pages/contact.html) - feel free to contact me!

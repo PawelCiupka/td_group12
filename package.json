@@ -1,7 +1,7 @@
 {
-  "name": "heroku-cra-node",
+  "name": "td_group12",
   "version": "1.0.0",
-  "description": "How to use create-react-app with a custom Node API on Heroku",
+  "description": "Website used to present game project which I create with my collegues on University.",
   "engines": {
     "node": "10.x"
   },
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mars/heroku-cra-node.git"
+    "url": "https://github.com/PawelCiupka/td_group12"
   },
   "keywords": [
     "node",
@@ -31,6 +31,5 @@
     "create-react-app",
     "react"
   ],
-  "license": "MIT",
   "devDependencies": {}
 }
