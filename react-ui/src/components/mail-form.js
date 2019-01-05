@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from "axios";
 
 
 class MailForm extends Component {
@@ -29,14 +30,21 @@ class MailForm extends Component {
     }
 
     handleSubmit(event) {
-        this.sendMail();
+        this.sendMail(this.state.firstname, this.state.lastname, this.state.mail);
         event.preventDefault();
     }
 
-    sendMail() {
+    sendMail = (firstname, lastname, mail) => {
         alert('Imię: ' + this.state.firstname + '\nNazwisko: ' + this.state.lastname +'\nMail: ' + this.state.mail);
 
-    }
+    
+        axios.post("/api/sendMail", {
+            firstname: firstname,
+            lastname: lastname,
+            mail: mail
+        });
+    };
+
 
     render() {
         return (
