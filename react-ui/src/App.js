@@ -9,6 +9,8 @@ import {
 import Home from './Home';
 import Login from './Login';
 import GetGame from './GetGame';
+import Test from './components/mail-form';
+
 
 // Routing class
 class App extends Component {
@@ -20,6 +22,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/getgame" component={GetGame} />
+          <Route path="/test" component={Test} />
 
         </>
       </Router>
