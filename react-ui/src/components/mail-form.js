@@ -30,18 +30,17 @@ class MailForm extends Component {
     }
 
     handleSubmit(event) {
-        this.sendMail(this.state.firstname, this.state.lastname, this.state.mail);
+        this.sendMail();
         event.preventDefault();
     }
 
-    sendMail = (firstname, lastname, mail) => {
+    sendMail = () => {
         alert('Imię: ' + this.state.firstname + '\nNazwisko: ' + this.state.lastname +'\nMail: ' + this.state.mail);
-
     
         axios.post("/api/sendMail", {
-            firstname: firstname,
-            lastname: lastname,
-            mail: mail
+            firstname: 'XD',
+            lastname: this.state.lastname,
+            mail: this.state.mail
         });
     };
 
@@ -61,9 +60,10 @@ class MailForm extends Component {
                         </label>
                         <label>
                             <p>Mail</p>
-                            <p><input type="password" value={this.state.mail} onChange={this.handMailChange}></input></p>
+                            <p><input type="mail" value={this.state.mail} onChange={this.handMailChange}></input></p>
                         </label>
                         <input type="submit" value="Wyślij"></input>
+                        <button onClick={() => this.sendMail()}>XDXDXDXD</button>
                     </form>
                 </div>
             </>

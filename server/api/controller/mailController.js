@@ -1,5 +1,3 @@
-'use strict'
-
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
@@ -11,12 +9,10 @@ const transporter = nodemailer.createTransport({
 });
 
 module.exports = {
-    sendMail : function(req, res, next){ 
-        // const { firstname, lastname, mail } = req.body;
-        const firstname = req.firstname;
-        const lastname = req.lastname;
-        const mail = req.mail;
+    sendMail : function(req, res){ 
+        const { firstname, lastname, mail } = req.body;
 
+        console.log(req.body);
 
         const mailOptions = {
             from: mail,
