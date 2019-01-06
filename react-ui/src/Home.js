@@ -143,7 +143,7 @@ class Home extends Component {
               <a href="https://github.com/CinU331/TD_Grupa12"><i class="fab fa-github"></i> TD_Grupa12</a>
             </p>
             <p className="loginLink"><Link to="/login">Zaloguj</Link></p>
-
+            <p className="loginLink"><Link to="/test">Wyślij do nas maila!</Link></p>
           </div>
           <div className="col-sm-1"></div>
 
