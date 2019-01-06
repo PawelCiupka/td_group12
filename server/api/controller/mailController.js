@@ -29,6 +29,6 @@ module.exports = {
                 console.log('Send Mail error: ' + err);
             else
                 console.log('Send mail succes: ' + info);
-        })
+        });
     }
 }

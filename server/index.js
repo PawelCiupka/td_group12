@@ -9,7 +9,9 @@ const logger = require("morgan");
 const API_PORT = process.env.PORT || 5000;
 const app = express();
 
+app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(logger("dev"));
 
 const routes = require('./api/routes');
 app.use('/api', routes);
@@ -30,11 +32,6 @@ let db = mongoose.connection;
 db.once("open", () => console.log("Connected to the database"));
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use(logger("dev"));
-
 
 
 // Priority serve any static files.
