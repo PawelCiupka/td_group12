@@ -44,14 +44,18 @@ class MailForm extends Component {
     }
 
     sendMail = () => {
-        alert(this.state.firstname + ', dziękujemy za wiadomość. W najbliższym czasie skontaktujemy się z Tobą. :)');
+        if(this.state.firstname === "" || this.state.lastname === "" || this.state.mail === "" || this.state.message === "") {
+            alert('Uzupełnij wszystkie dane!');
+        } else {
+            alert(this.state.firstname + ', dziękujemy za wiadomość. W najbliższym czasie skontaktujemy się z Tobą. :)');
     
-        axios.post("/api/sendMail", {
-            firstname: this.state.firstname,
-            lastname: this.state.lastname,
-            mail: this.state.mail,
-            message: this.state.message
-        });
+            axios.post("/api/sendMail", {
+                firstname: this.state.firstname,
+                lastname: this.state.lastname,
+                mail: this.state.mail,
+                message: this.state.message
+            });
+        }
     };
 
     // getRecaptcha =() => {

@@ -17,13 +17,14 @@ module.exports = {
 
         console.log(req.body);
 
+        const subject = 'Nowa wiadomość od ' + firstname + ' ' + lastname + '.';
+
         const mailOptions = {
             from: mail,
             to: 'tdgroup12.Team@gmail.com',
-            subject: 'Ktoś chcę zagrać w grę!', 
-            html: '<h1>Cześć!' +
-            '<p>Nazywam się <strong>' + firstname + ' ' + lastname + '</strong>.</p>'
-            + '<p>Kontakt: <strong>' + mail +'<strong></p> <br/>'
+            subject: subject, 
+            html: '<p>Imię i nazwisko: <strong>' + firstname + ' ' + lastname + '</strong>.</p>' 
+            + '<p>Email: <strong>' + mail +'<strong></p> <br/>'
             + '<p>' + message + '</p>'
         };
 

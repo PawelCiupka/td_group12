@@ -22,10 +22,10 @@ const dbPassword = "admin1234";
 const dbRoute = "mongodb://"+dbUser+":"+dbPassword+"@ds125342.mlab.com:25342/td_group12";
 
 // connects our back end code with the database
-// mongoose.connect(
-//   dbRoute,
-//   { useNewUrlParser: true }
-// );
+mongoose.connect(
+  dbRoute,
+  { useNewUrlParser: true }
+);
 
 let db = mongoose.connection;
 
