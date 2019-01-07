@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import './styles/Home.css';
+import './components/mail-form';
 
 import photo1 from './images/5.png';
 import photo2 from './images/4.png';
 import photo3 from './images/6.png';
+import MailForm from './components/mail-form';
 
 
 class Home extends Component {
@@ -105,14 +107,10 @@ class Home extends Component {
             </div>
 
             <p className="text">
-              1. Pobierz naszą grę <a href="https://ufile.io/srxgi" target="_blank">TUTAJ</a>.
+              Wypełnij formularz, a my skontaktujemy się z Tobą!
             </p>
-            <p className="text">
-              2. Rozpakuj archiwum na swoim komputerze.
-            </p>
-            <p className="text">
-              3. Uruchom grę wybierając plik z rozszerzeniem .exe.
-            </p>
+            
+            <MailForm />
 
           </div>
           <div className="col-sm-2"></div>

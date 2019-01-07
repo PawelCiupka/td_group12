@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from "axios";
 
+import '../styles/components/mail-form.css';
+
 
 class MailForm extends Component {
     constructor(props) {
@@ -8,14 +10,17 @@ class MailForm extends Component {
         this.state = {
             firstname: "",
             lastname: "",
-            mail: ""
+            mail: "",
+            message: ""
         };
 
         this.handleFirstnameChange = this.handleFirstnameChange.bind(this);
         this.handleLastnameChange = this.handleLastnameChange.bind(this);
-        this.handMailChange = this.handMailChange.bind(this);
+        this.handleMailChange = this.handleMailChange.bind(this);
+        this.handleMessageChange = this.handleMessageChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
 
     handleFirstnameChange(event) {
         this.setState({firstname: event.target.value});
@@ -25,8 +30,12 @@ class MailForm extends Component {
         this.setState({lastname: event.target.value});
     }
 
-    handMailChange(event) {
+    handleMailChange(event) {
         this.setState({mail: event.target.value});
+    }
+
+    handleMessageChange(event) {
+        this.setState({message: event.target.value});
     }
 
     handleSubmit(event) {
@@ -35,14 +44,23 @@ class MailForm extends Component {
     }
 
     sendMail = () => {
-        alert('Imię: ' + this.state.firstname + '\nNazwisko: ' + this.state.lastname +'\nMail: ' + this.state.mail);
+        alert(this.state.firstname + ', dziękujemy za wiadomość. W najbliższym czasie skontaktujemy się z Tobą. :)');
     
         axios.post("/api/sendMail", {
             firstname: this.state.firstname,
             lastname: this.state.lastname,
-            mail: this.state.mail
+            mail: this.state.mail,
+            message: this.state.message
         });
     };
+
+    // getRecaptcha =() => {
+    //     axios.get('/api/getRecaptcha')
+    //         .then((res) => {
+    //             //let elem = <p>{res}</p>
+    //             this.setState({recaptcha: res});
+    //         });
+    // }
 
 
     render() {
@@ -51,19 +69,28 @@ class MailForm extends Component {
                 <div className="MailForm">
                     <form onSubmit={this.handleSubmit}>
                         <label>
-                            <p>Imię</p>
-                            <p><input type="text" value={this.state.firstname} name="firstname" onChange={this.handleFirstnameChange}></input></p>
+                            <div className="inputField" id="firstnameField">
+                                <input placeholder="Imię" type="text" value={this.state.firstname} name="firstname" onChange={this.handleFirstnameChange}></input>
+                            </div>
                         </label>                        
                         <label>
-                            <p>Nazwisko</p>
-                            <p><input type="text" value={this.state.lastname} name="lastname" onChange={this.handleLastnameChange}></input></p>
+                            <div className="inputField" id="lastnameField">
+                                <input placeholder="Nazwisko" type="text" value={this.state.lastname} name="lastname" onChange={this.handleLastnameChange}></input>
+                            </div>
                         </label>
                         <label>
-                            <p>Mail</p>
-                            <p><input type="mail" value={this.state.mail} name="mail" onChange={this.handMailChange}></input></p>
+                            <div className="inputField">
+                                <input placeholder='Email' type="text" value={this.state.mail} name="mail" onChange={this.handleMailChange}></input>
+                            </div>
                         </label>
-                        <input type="submit" value="Wyślij"></input>
-                        <button onClick={() => this.sendMail()}>XDXDXDXD</button>
+                        <label>
+                            <div className="inputField">
+                                <textarea placeholder="Wiadomość" type="text" value={this.state.message} name="message" onChange={this.handleMessageChange}></textarea>
+                            </div>
+                        </label>
+                        <label>
+                            <input className="SendMailButton" type="submit" value="Wyślij"></input>
+                        </label>
                     </form>
                 </div>
             </>
