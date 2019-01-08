@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import './styles/Home.css';
+import './styles/style.css';
 import './components/mail-form';
 
 import photo1 from './images/5.png';
@@ -46,30 +46,30 @@ class Home extends Component {
 
         <div className="row third">
 
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+            <ol className="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src={photo1} alt="First slide" />
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <img className="d-block w-100" src={photo1} alt="First slide" />
               </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src={photo2} alt="Second slide" />
+              <div className="carousel-item">
+                <img className="d-block w-100" src={photo2} alt="Second slide" />
               </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src={photo3} alt="Third slide" />
+              <div className="carousel-item">
+                <img className="d-block w-100" src={photo3} alt="Third slide" />
               </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
+            <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span className="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
+            <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span className="carousel-control-next-icon" aria-hidden="true"></span>
+              <span className="sr-only">Next</span>
             </a>
           </div>
 
@@ -138,10 +138,9 @@ class Home extends Component {
             <p className="textBreak"></p>
             <p className="footerText">
               Zapraszamy na naszego GitHuba! :) <br></br>
-              <a href="https://github.com/CinU331/TD_Grupa12"><i class="fab fa-github"></i> TD_Grupa12</a>
+              <a href="https://github.com/CinU331/TD_Grupa12"><i className="fab fa-github"></i> TD_Grupa12</a>
             </p>
             <p className="loginLink"><Link to="/login">Zaloguj</Link></p>
-            <p className="loginLink"><Link to="/test">Wyślij do nas maila!</Link></p>
           </div>
           <div className="col-sm-1"></div>
 

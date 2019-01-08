@@ -74,22 +74,22 @@ class MailForm extends Component {
                     <form onSubmit={this.handleSubmit}>
                         <label>
                             <div className="inputField" id="firstnameField">
-                                <input placeholder="Imię" type="text" value={this.state.firstname} name="firstname" onChange={this.handleFirstnameChange}></input>
+                                <input placeholder="Imię" type="text" value={this.state.firstname} name="" onChange={this.handleFirstnameChange}></input>
                             </div>
                         </label>                        
                         <label>
                             <div className="inputField" id="lastnameField">
-                                <input placeholder="Nazwisko" type="text" value={this.state.lastname} name="lastname" onChange={this.handleLastnameChange}></input>
+                                <input placeholder="Nazwisko" type="text" value={this.state.lastname} name="" onChange={this.handleLastnameChange}></input>
                             </div>
                         </label>
                         <label>
                             <div className="inputField">
-                                <input placeholder='Email' type="text" value={this.state.mail} name="mail" onChange={this.handleMailChange}></input>
+                                <input placeholder='Email' type="email" value={this.state.mail} name="" onChange={this.handleMailChange}></input>
                             </div>
                         </label>
                         <label>
                             <div className="inputField">
-                                <textarea placeholder="Wiadomość" type="text" value={this.state.message} name="message" onChange={this.handleMessageChange}></textarea>
+                                <textarea placeholder="Wiadomość" type="text" value={this.state.message} name="" onChange={this.handleMessageChange}></textarea>
                             </div>
                         </label>
                         <label>

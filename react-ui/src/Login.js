@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import './styles/Login.css';
+import axios from "axios";
+import './styles/style.css';
 
 class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
             login: "",
-            password: ""
+            password: "",
+            gameTitle: 'TD_GROUP12'
         };
 
         this.handleLoginChange = this.handleLoginChange.bind(this);
@@ -31,21 +33,19 @@ class Login extends Component {
 
     render() {
         return (
-            <>
-                <div className="Login">
-                    <form onSubmit={this.handleSubmit}>
-                        <label>
-                            <p>Login:</p>
-                            <p><input type="text" value={this.state.login} onChange={this.handleLoginChange}></input></p>
-                        </label>
-                        <label>
-                            <p>Password:</p>
-                            <p><input type="password" value={this.state.password} onChange={this.handlePasswordChange}></input></p>
-                        </label>
-                        <input type="submit" value="Login"></input>
-                    </form>
-                </div>
-            </>
+            <section className="Login">
+                <form className="login-form" onSubmit={this.handleSubmit}>
+                    <h1>{this.state.gameTitle}</h1>
+                    <h2>Zaloguj się</h2>
+                    <label>
+                        <input type="text" placeholder="Login" value={this.state.login} onChange={this.handleLoginChange}></input>
+                    </label>
+                    <label>
+                        <input type="password" placeholder="Hasło" value={this.state.password} onChange={this.handlePasswordChange}></input>
+                    </label>
+                    <input className="LoginButton" type="submit" value="Login"></input>
+                </form>
+            </section>
         )
     }
 }

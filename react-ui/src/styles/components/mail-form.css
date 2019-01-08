@@ -18,16 +18,28 @@
 .MailForm .inputField input, .MailForm .inputField textarea {
     width: 80%;
     
-    border: 0.1rem solid #212529;
-    border-radius: 5px;
+    border: 0;
+    border-bottom: 0.1rem solid #212529;
 
     padding: 2vh 1vw;
 
-    color: #212529;
+    color: #ddd;
+    background: rgba(0, 0, 0, 0);
+    transition-duration: 0.5s;
 }
 
 .MailForm .inputField input::placeholder, .MailForm .inputField textarea::placeholder {
-    color:#aaa;;
+    color:#ddd;
+}
+
+.MailForm .inputField textarea {
+    min-height: 3rem;
+}
+
+.MailForm .inputField input:focus, .MailForm .inputField textarea:focus {
+    outline-width: 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-bottom: 0.1rem solid #816732;
 }
 
 .MailForm .inputField textarea{
