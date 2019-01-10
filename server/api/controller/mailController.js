@@ -36,6 +36,18 @@ module.exports = {
         });
     },
 
+    addMail : function(req, res) {
+
+    },
+
+    getMail : function(req, res) {
+
+    },
+
+    getAllMails : function(req, res) {
+        
+    }
+
     // getRecaptcha : function(req, res) {
     //     res.send( { captcha:res.recaptcha } );
     // }

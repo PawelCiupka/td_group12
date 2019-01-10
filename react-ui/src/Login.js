@@ -8,7 +8,7 @@ class Login extends Component {
         this.state = {
             login: "",
             password: "",
-            gameTitle: 'TD_GROUP12'
+            gameTitle: 'Barberion'
         };
 
         this.handleLoginChange = this.handleLoginChange.bind(this);
