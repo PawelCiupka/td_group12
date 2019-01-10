@@ -1,4 +1,4 @@
-# "td_group12" game website
+# Barberion game website
 This website is use to present game project which I create with my collegues on University.
 
 ## Table of contents
@@ -11,11 +11,13 @@ This website is use to present game project which I create with my collegues on 
 * JavaScript
 * Node.js
 * React
+* MongoDB
 * HTML5
 * CSS
+* Bootstrap
 
 ## Setup
-Just click the link: [https://tdgroup12.herokuapp.com/](https://tdgroup12.herokuapp.com/)
+Just click the link: [https://barberion.herokuapp.com/](https://barberion.herokuapp.com/)
 
 ## Status
 Project is:  _in progress_.
