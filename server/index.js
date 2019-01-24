@@ -21,17 +21,17 @@ const dbUser = "root";
 const dbPassword = "admin1234";
 const dbRoute = "mongodb://"+dbUser+":"+dbPassword+"@ds125342.mlab.com:25342/td_group12";
 
-// connects our back end code with the database
-mongoose.connect(
-  dbRoute,
-  { useNewUrlParser: true }
-);
+// // connects our back end code with the database
+// mongoose.connect(
+//   dbRoute,
+//   { useNewUrlParser: true }
+// );
 
-let db = mongoose.connection;
+// let db = mongoose.connection;
 
-db.once("open", () => console.log("Connected to the database"));
+// db.once("open", () => console.log("Connected to the database"));
 
-db.on("error", console.error.bind(console, "MongoDB connection error:"));
+// db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 
 // Priority serve any static files.
