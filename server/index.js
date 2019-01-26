@@ -21,17 +21,17 @@ const dbUser = "root";
 const dbPassword = "admin1234";
 const dbRoute = "mongodb://"+dbUser+":"+dbPassword+"@ds125342.mlab.com:25342/td_group12";
 
-// // connects our back end code with the database
-// mongoose.connect(
-//   dbRoute,
-//   { useNewUrlParser: true }
-// );
+// connects our back end code with the database
+mongoose.connect(
+  dbRoute,
+  { useNewUrlParser: true }
+);
 
-// let db = mongoose.connection;
+let db = mongoose.connection;
 
-// db.once("open", () => console.log("Connected to the database"));
+db.once("open", () => console.log("Connected to the database"));
 
-// db.on("error", console.error.bind(console, "MongoDB connection error:"));
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 
 // Priority serve any static files.
@@ -51,3 +51,25 @@ app.get('*', function (request, response) {
 
 // launch our backend into a port
 app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
+
+
+
+// const Hour = require('./api/model/calendar/hour');
+// const Day = require('./api/model/calendar/day');
+
+// const d = new Date();
+
+// var h1 = new Hour({
+//   value: '7:00'
+// });
+// var h2 = new Hour({
+//   value: '8:00'
+// });
+
+// var day1 = new Day({
+//   date: d.getDate(),
+//   dayOfWeek: d.getDay(),
+//   hours: [h1, h2]
+// });
+
+// console.log('Godzinka: ' + day1.hours[1].value);

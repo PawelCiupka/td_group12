@@ -18,7 +18,6 @@ class App extends Component {
     return (
       <Router>
         <>
-
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/getgame" component={GetGame} />

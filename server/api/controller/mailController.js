@@ -1,7 +1,4 @@
 const nodemailer = require('nodemailer');
-// const Recaptcha = require('express-recaptcha').Recaptcha;
-// const recaptcha = new Recaptcha('6Lf7dYcUAAAAANA14Plpqnb2AGChoIhTatzJjx2m', '6Lf7dYcUAAAAAEPhPqD5BPz9ja4S');
-
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -47,8 +44,4 @@ module.exports = {
     getAllMails : function(req, res) {
         
     }
-
-    // getRecaptcha : function(req, res) {
-    //     res.send( { captcha:res.recaptcha } );
-    // }
 }

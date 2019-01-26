@@ -57,15 +57,7 @@ class MailForm extends Component {
             });
         }
     };
-
-    // getRecaptcha =() => {
-    //     axios.get('/api/getRecaptcha')
-    //         .then((res) => {
-    //             //let elem = <p>{res}</p>
-    //             this.setState({recaptcha: res});
-    //         });
-    // }
-
+    
 
     render() {
         return (

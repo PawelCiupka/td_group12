@@ -12,7 +12,7 @@ class CalendarComp extends Component {
     }
 
     handleHourChoice(event) {
-        alert('Chcesz zarezerwować salkę Bilard na godzinę 8:00?'); 
+        alert('Chcesz zarezerwować salkę ' + this.state.calendarTitle + ' na godzinę 8:00?'); 
     }
 
     render() {
