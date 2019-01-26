@@ -9,8 +9,8 @@ const logger = require("morgan");
 const API_PORT = process.env.PORT || 5000;
 const app = express();
 
-app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json()); 
 app.use(logger("dev"));
 
 const routes = require('./api/routes');
@@ -51,25 +51,3 @@ app.get('*', function (request, response) {
 
 // launch our backend into a port
 app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
-
-
-
-// const Hour = require('./api/model/calendar/hour');
-// const Day = require('./api/model/calendar/day');
-
-// const d = new Date();
-
-// var h1 = new Hour({
-//   value: '7:00'
-// });
-// var h2 = new Hour({
-//   value: '8:00'
-// });
-
-// var day1 = new Day({
-//   date: d.getDate(),
-//   dayOfWeek: d.getDay(),
-//   hours: [h1, h2]
-// });
-
-// console.log('Godzinka: ' + day1.hours[1].value);

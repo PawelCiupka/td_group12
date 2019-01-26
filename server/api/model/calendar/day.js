@@ -1,16 +1,18 @@
 const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
+const id = mongoose.Types.ObjectId();
+
 const daySchema = new Schema({
-    _id: Schema.Types.ObjectId,
-    date: Date,
-    dayOfWeek: {
-        type: String
+    _id: {
+        type: Schema.Types.ObjectId,
+        default: id
     },
-    hallType: {
-        type: String,
-        required: true
-    },
+    year: Number,
+    month: Number,
+    day: Number,
+    dayOfWeek: String,
+    hallType: String,
     hours: [{
         type: Schema.Types.ObjectId, 
         ref: 'Hour'
