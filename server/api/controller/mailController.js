@@ -2,9 +2,13 @@ const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
+    secure: false, 
     auth: {
         user: 'tdgroup12.Team@gmail.com',
         pass: "TowerDefence"
+    },
+    tls: {
+        rejectUnauthorized: false
     }
 });
 
