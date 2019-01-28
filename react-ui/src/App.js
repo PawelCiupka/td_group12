@@ -10,6 +10,7 @@ import Home from './Home';
 import Login from './Login';
 import GetGame from './GetGame';
 import Calendar from './Calendar';
+import Gameplay from './Gameplay';
 
 
 // Routing class
@@ -22,6 +23,7 @@ class App extends Component {
           <Route path="/login" component={Login} />
           <Route path="/getgame" component={GetGame} />
           <Route path="/calendar" component={Calendar}/>
+          <Route path="/gameplay" component={Gameplay}/>
 
         </>
       </Router>

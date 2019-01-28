@@ -17,7 +17,6 @@ class Home extends Component {
     };
   }
 
-
   render() {
     return (
       <div className="Home">
@@ -25,7 +24,7 @@ class Home extends Component {
         <div className="row first"></div>
 
         <div className="row gameTitle">
-          <h1>{this.state.gameTitle}</h1>
+          <h1><a href='Gameplay'>{this.state.gameTitle}</a></h1>
         </div>
 
         <div className="row second">
@@ -45,6 +44,10 @@ class Home extends Component {
 
 
         <div className="row third">
+        
+          <div className="see-gameplay">
+            <a href="https://youtu.be/w0BdAydfm0I" target="_blank">Obejrzyj Gameplay</a>
+          </div>
 
           <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
             <ol className="carousel-indicators">
@@ -97,7 +100,6 @@ class Home extends Component {
         </div>
 
         <div className="row fifth">
-
           <div className="col-sm-2"></div>
 
           <div className="col-sm-8">
