@@ -47,7 +47,6 @@ class Home extends Component {
         
           <div className="see-gameplay">
             <a href="https://youtu.be/w0BdAydfm0I" target="_blank">Obejrzyj Gameplay</a>
-            <a href="https://drive.google.com/open?id=1p7J3Vv3I6cubvx-oj14GKl-r1YlCb7iQ" style="margin: 1em 0 0 0" target="_blank">Pobierz grę</a>
           </div>
 
           <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
@@ -84,6 +83,7 @@ class Home extends Component {
           <div className="col-sm-1"></div>
 
           <div className="col-sm-10">
+          
 
             <p className="text">
               Masywne siły wrogów. Dlaczego i skąd przybywają? Tego nie wie nikt, a wizje proroków są zamglone. Ktokolwiek inny coś wie..? Przybywają. Królestwo prawie upada. Życie i jego cele nie mają żadnej wartości dla tych istot. Pola gniją. Lasy płoną. Lud cierpi. Dewastacja ma miejsce tu i teraz. Królestwo ma jedynie jedną możliwą opcję: bronić się, bronić i bronić. Jesteś gotów?
@@ -100,10 +100,15 @@ class Home extends Component {
 
         </div>
 
+        <div className="row download-game">
+            <a href="https://drive.google.com/open?id=1p7J3Vv3I6cubvx-oj14GKl-r1YlCb7iQ" target="_blank">Pobierz grę</a>
+          </div>
+
         <div className="row fifth">
           <div className="col-sm-2"></div>
 
-          <div className="col-sm-8">
+          <div className="col-sm-8">        
+        
 
             <div className="row sectionTitle">
               <h3>Chcesz spróbować swoich sił i zmierzyć się z wrogami Królestwa? Przenieś się do fantastycznego świata {this.state.gameTitle}!</h3>

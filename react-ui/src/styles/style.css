@@ -279,7 +279,7 @@ footer {
  
 }
 
-.see-gameplay {
+.see-gameplay, .download-game {
   width: 100vw;
   margin: 1em 0 1em 0;
   font-size: 2em;
@@ -303,4 +303,16 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.download-game a {
+  color: #000;
+  transition-duration: 1s;
+}
+
+.download-game a:hover {
+  text-decoration: none;
+  transform: rotate(360deg);
+  font-size: 4em;
+  color: #fabf49;
 }
