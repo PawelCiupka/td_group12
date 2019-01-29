@@ -47,6 +47,7 @@ class Home extends Component {
         
           <div className="see-gameplay">
             <a href="https://youtu.be/w0BdAydfm0I" target="_blank">Obejrzyj Gameplay</a>
+            <a href="https://drive.google.com/open?id=1p7J3Vv3I6cubvx-oj14GKl-r1YlCb7iQ" style="margin: 1em 0 0 0" target="_blank">Pobierz grę</a>
           </div>
 
           <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
