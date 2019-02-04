@@ -6,7 +6,7 @@ module.exports = {
         const id = mongoose.Types.ObjectId();
 
         const d = new Date(req.body.year, req.body.month, req.body.day);
-        const arrayOfDays = ['Czwartek', 'Piątek', 'Sobota', 'Niedziela', 'Poniedziałek', 'Wtorek', 'Środa'];
+        const arrayOfDays = ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota'];
         const dayOfWeek = arrayOfDays[d.getDay()];
 
         console.log('_______________________________________');
@@ -45,5 +45,6 @@ module.exports = {
     },
     getSingle : function(req, res) {
         
-    }
+    },
+
 }

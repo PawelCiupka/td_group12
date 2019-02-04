@@ -11,6 +11,7 @@ import Login from './Login';
 import GetGame from './GetGame';
 import Calendar from './Calendar';
 import Gameplay from './Gameplay';
+import DaysApp from './DaysApp';
 
 
 // Routing class
@@ -24,6 +25,7 @@ class App extends Component {
           <Route path="/getgame" component={GetGame} />
           <Route path="/calendar" component={Calendar}/>
           <Route path="/gameplay" component={Gameplay}/>
+          <Route path="/days" component={DaysApp}/>
 
         </>
       </Router>

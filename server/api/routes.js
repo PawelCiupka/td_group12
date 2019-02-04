@@ -15,8 +15,8 @@ router.post('/sendMail', mailCtrl.sendMail);
 router.get('/authorization', userCtrl.authorization);
 
 // DayController Routing
-router.post('/createDay', dayCtrl.create);
-router.get('/getAllDays', dayCtrl.getAll);
+router.post('/day/create', dayCtrl.create);
+router.get('/day/getAll', dayCtrl.getAll);
     
 
 module.exports = router;
