@@ -5,6 +5,7 @@ const router = express.Router();
 const mailCtrl = require('./controller/mailController');
 const userCtrl = require('./controller/userController');
 const dayCtrl = require('./controller/dayController');
+const hourCtrl = require('./controller/hourController');
 
 
 
@@ -17,6 +18,10 @@ router.get('/authorization', userCtrl.authorization);
 // DayController Routing
 router.post('/day/create', dayCtrl.create);
 router.get('/day/getAll', dayCtrl.getAll);
+
+// HourController Routing
+router.post('/hour/create', hourCtrl.create);
+router.get('/hour/getAll', hourCtrl.getAll);
     
 
 module.exports = router;

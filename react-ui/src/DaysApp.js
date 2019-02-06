@@ -87,9 +87,10 @@ class DaysApp extends Component {
                     {this.state.days.length <= 0
                         ? "Brak dni w bazie danych."
                         : this.state.days.map(day => (
-                            <li key={this.state.day._id}>
-                                <span>{day.day}.{day.month}.{day.year} </span> <br />
-                                <span>{day.dayOfWeek}</span> <br/><br/>
+                            <li key={day._id}>
+                                <span><strong>{day._id}</strong></span>-
+                                <span>{day.day}.{day.month}.{day.year} </span>-
+                                <span>{day.dayOfWeek}</span> <br/>
 
                             </li>
                         ))}

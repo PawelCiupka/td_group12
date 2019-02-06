@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
+const id = mongoose.Types.ObjectId();
+
 const hallTimetableSchema = new Schema({
-    _id: Schema.Types.ObjectId,
-    hallName: {
-        type: String,
-        required: true
+    _id: {
+        type: Schema.Types.ObjectId,
+        default: id
     },
-    hallType: {
+    hallName: {
         type: String,
         required: true
     },

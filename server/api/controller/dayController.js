@@ -35,8 +35,8 @@ module.exports = {
     },
     getAll : function(req, res) {
         Day.find()
-        .then(notes => {
-            res.send(notes);
+        .then(day => {
+            res.send(day);
         }).catch(err => {
             res.status(500).send({
                 message: err.message || "Some error occurred while retrieving days."

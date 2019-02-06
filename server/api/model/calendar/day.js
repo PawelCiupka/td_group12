@@ -12,7 +12,6 @@ const daySchema = new Schema({
     month: Number,
     day: Number,
     dayOfWeek: String,
-    hallType: String,
     hours: [{
         type: Schema.Types.ObjectId, 
         ref: 'Hour'

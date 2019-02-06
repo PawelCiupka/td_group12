@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
+const id = mongoose.Types.ObjectId();
+
 const weekSchema = new Schema({
-    _id: Schema.Types.ObjectId,
-    hallType: {
-        type: String,
-        required: true
+    _id: {
+        type: Schema.Types.ObjectId,
+        default: id
     },
     days: [{
         type: Schema.Types.ObjectId, 
