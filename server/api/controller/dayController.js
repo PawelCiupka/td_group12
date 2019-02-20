@@ -44,7 +44,8 @@ module.exports = {
         });
     },
     getSingle : function(req, res) {
-        Day.findOne({ _id: req.id})
+        let id = req.params.id;
+        Day.findOne({ _id: id})
         .then(day => {
             res.send(day);
         }).catch(err => {
