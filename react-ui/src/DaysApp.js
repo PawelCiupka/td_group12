@@ -78,7 +78,7 @@ class DaysApp extends Component {
     };
 
     getSingleDayFromDb = () => {
-        axios.get("/api/day/getSingle/" + this.state.id, {
+        axios.get("/api/day/getSingle", {
             params: {
                 id: this.state.id
             }
