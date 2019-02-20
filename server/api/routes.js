@@ -18,6 +18,7 @@ router.get('/authorization', userCtrl.authorization);
 // DayController Routing
 router.post('/day/create', dayCtrl.create);
 router.get('/day/getAll', dayCtrl.getAll);
+router.get('/day/getSingle', dayCtrl.getSingle);
 
 // HourController Routing
 router.post('/hour/create', hourCtrl.create);

@@ -6,10 +6,12 @@ class DaysApp extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            id: '',
             year: '',
             month: '',
             day: '',
             days: [],
+            singleDay: '',
             intervalIsSet: false
         };   
 
@@ -26,6 +28,11 @@ class DaysApp extends Component {
     };
 
     handleTextChange(e) {
+        if (e.target.name === "id") {
+            this.setState({
+              id: e.target.value
+            });
+          }
         if (e.target.name === "year") {
           this.setState({
             year: e.target.value
@@ -46,7 +53,12 @@ class DaysApp extends Component {
     handleSubmit(event) {
         this.insertNewDay();
         event.preventDefault();
-      }
+    }
+
+    handleGetSingleDay(event) {
+        this.getSingleDayFromDb();
+        event.preventDefault();
+    }
 
     insertNewDay = () => {
         axios.post("/api/day/create", {
@@ -63,6 +75,16 @@ class DaysApp extends Component {
             this.setState({ days: res.data})
         });
     };
+
+    getSingleDayFromDb = () => {
+        axios.get("/api/day/getSingle", {
+            params: {
+                id: this.state.id
+            }
+        }).then(res => {
+            this.setState({ singleDay: res.data})
+        });
+    }
 
     render() {
         return(
@@ -82,6 +104,29 @@ class DaysApp extends Component {
                         <input type="submit" value="Go"></input>
                     </form>
                 </div>
+                <div>
+                    <form onSubmit={this.handleGetSingleDay}>
+                        <h2>Zwróć dzień</h2>
+                        <label>
+                            <input type="text" placeholder="ID" name="id" value={this.state.id} onChange={this.handleTextChange}></input>
+                        </label>
+                        <input type="submit" value="Go"></input>
+                    </form>
+                </div>
+
+                <h2>Pojedynczy dzien</h2>
+                
+                    {this.state.singleDay == null
+                    ? "Nie wybrano dnia."
+                    :   <div>
+                            <p>{this.state.singleDay._id}</p>
+                            <p>{this.state.singleDay.day}</p>
+                            <p>{this.state.singleDay.month}</p>
+                            <p>{this.state.singleDay.year}</p>
+                            <p>{this.state.singleDay.hours}</p>
+                        </div>
+                    }
+
                 <h2>Lista wszystkich dni w bazie</h2>
                 <ul>
                     {this.state.days.length <= 0

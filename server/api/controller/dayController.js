@@ -44,7 +44,14 @@ module.exports = {
         });
     },
     getSingle : function(req, res) {
-        
+        Day.findOne({ _id: req.id})
+        .then(day => {
+            res.send(day);
+        }).catch(err => {
+            res.status(500).send({
+                message: err.message || "Some error occuered while retriving day."
+            });
+        });
     },
 
 }
