@@ -32,6 +32,7 @@ class DaysApp extends Component {
             this.setState({
               id: e.target.value
             });
+            console.log(e.target.value);
           }
         if (e.target.name === "year") {
           this.setState({
@@ -77,7 +78,7 @@ class DaysApp extends Component {
     };
 
     getSingleDayFromDb = () => {
-        axios.get("/api/day/getSingle", {
+        axios.get("/api/day/getSingle/" + this.state.id, {
             params: {
                 id: this.state.id
             }
