@@ -1,7 +1,7 @@
 {
-  "name": "td_group12",
+  "name": "beer-code-validator",
   "version": "1.0.0",
-  "description": "Website used to present game project which I create with my collegues on University.",
+  "description": "Application created for Summer Boom Festival",
   "engines": {
     "node": "10.x"
   },
@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/PawelCiupka/td_group12"
+    "url": "https://github.com/PawelCiupka/beer-code-validator"
   },
   "keywords": [
     "node",

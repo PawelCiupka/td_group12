@@ -17,9 +17,9 @@ const routes = require('./api/routes');
 app.use('/api', routes);
 
 
-const dbUser = "root";
-const dbPassword = "admin1234";
-const dbRoute = "mongodb://"+dbUser+":"+dbPassword+"@ds125342.mlab.com:25342/td_group12";
+const dbUser = "administrator";
+const dbPassword = "Admin1468";
+const dbRoute = "mongodb://"+dbUser+":"+dbPassword+"@ds353957.mlab.com:53957/beer-code-scanner";
 
 // connects our back end code with the database
 mongoose.connect(

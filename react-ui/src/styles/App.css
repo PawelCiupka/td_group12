@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+
+#cam-container {
+  display: flex;
+  justify-content: center;
+}
+
+#cam-container video {
+  width: 80%;
+}
+
+.drawingBuffer {
+  display: none;
+}
